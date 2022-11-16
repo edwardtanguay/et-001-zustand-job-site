@@ -1,24 +1,24 @@
 import './App.scss';
 import { NavLink, Routes, Route, Navigate } from 'react-router-dom';
-import { PageWelcome } from './components/PageWelcome';
-import { PageInfo } from './components/PageInfo';
-import { PageAbout } from './components/PageAbout';
+import { PageDashboard } from './components/PageDashboard';
+import { PageJobs } from './components/PageJobs';
+import { PageSkills } from './components/PageSkills';
 
 function App() {
 	return (
 		<div className="App">
-			<h1>Info Site</h1>
+			<h1>Job Site</h1>
 			<nav>
-				<NavLink to="/welcome">Welcome</NavLink>
-				<NavLink to="/info">Info</NavLink>
-				<NavLink to="/about">About</NavLink>
+				<NavLink to="/dashboard">Dashboard</NavLink>
+				<NavLink to="/jobs">Jobs</NavLink>
+				<NavLink to="/skills">Skills</NavLink>
 			</nav>
 
 			<Routes>
-				<Route path="/welcome" element={<PageWelcome />} />
-				<Route path="/info" element={<PageInfo />} />
-				<Route path="/about" element={<PageAbout />} />
-				<Route path="/" element={<Navigate to="/welcome" replace />} />
+				<Route path="/dashboard" element={<PageDashboard />} />
+				<Route path="/jobs" element={<PageJobs />} />
+				<Route path="/skills" element={<PageSkills />} />
+				<Route path="/" element={<Navigate to="/dashboard" replace />} />
 			</Routes>
 		</div>
 	);
