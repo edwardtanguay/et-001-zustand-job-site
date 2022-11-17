@@ -4,9 +4,10 @@ import axios from 'axios';
 const apiUrl = 'http://localhost:5556';
 
 interface IJob {
-	id: number,
+	id: number;
 	title: string;
 	company: string;
+	description: string;
 	url: string;
 	skills: string;
 	publicationDate: string;
@@ -24,14 +25,19 @@ export const PageJobs = () => {
 
 	return (
 		<div className="pageJobs">
-			<p>There are {jobs.length} jobs:</p>
 			<div className="jobs">
-				<h3>Jobs</h3>
-				<ul>
-					{jobs.map((job: IJob) => {
-						return <li>{job.title}</li>;
-					})}
-				</ul>
+				<h2>There are {jobs.length} jobs:</h2>
+				{jobs.map((job: IJob) => {
+					return (
+						<div className="job">
+							<div className="title"><a href={job.url} target="_blank">{job.title}</a></div>
+							<div className="company">{job.company}</div>
+							<div className="description">{job.description}</div>
+							<div className="skills">{job.skills}</div>
+							<div className="statusLine">{job.publicationDate}: {job.status}</div>
+						</div>
+					);
+				})}
 			</div>
 		</div>
 	);
