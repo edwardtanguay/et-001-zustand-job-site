@@ -21,5 +21,25 @@ body {
 		a.active {
 			color: rgb(211, 211, 110);
 		}
+
+	}
+
+	.pageDashboard {
+		.message {
+			font-size: 1.5rem;
+			span {
+				background-color: #444;
+				color: orange;
+				padding: .5rem;
+			}
+		}
+		button {
+			margin-right: .5rem;
+		}
+
+		.photoCamera {
+			transform: scale(1.8);
+			margin: .5rem .5rem 0 .5rem;
+		}
 	}
 }
