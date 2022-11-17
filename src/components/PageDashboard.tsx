@@ -5,9 +5,11 @@ import TextField from '@mui/material/TextField';
 
 export const PageDashboard = () => {
 	const [message, setMessage] = useState('Please click something, etc.');
-	const [form, setForm] = useState({
+	const [formData, setFormData] = useState({
 		title: 'ttt',
-		company: 'ccc'
+		company: 'ccc',
+		url: 'uuu',
+		description: 'ddd'
 	})
 
 	const handleButtonClick = (text: string) => {
@@ -104,8 +106,15 @@ export const PageDashboard = () => {
 					fullWidth
 					label="Job title"
 					margin="normal"
-					placeholder="Enter job title here"
-					value={jobTitle}
+					placeholder="Enter job title"
+					value={formData.title}
+				/>
+				<TextField
+					fullWidth
+					label="Company"
+					margin="normal"
+					placeholder="Enter the name of the company"
+					value={formData.company}
 				/>
 			</form>
 		</div>
