@@ -1,5 +1,5 @@
 body {
-background-color: #ccc;	
+	background-color: #ccc;
 	color: #333;
 	font-family: sans-serif;
 	padding: 0 1rem;
@@ -41,12 +41,14 @@ background-color: #ccc;
 	.pageDashboard {
 		.message {
 			font-size: 1.5rem;
+
 			span {
 				background-color: #444;
 				color: orange;
 				padding: .5rem;
 			}
 		}
+
 		button {
 			margin-right: .5rem;
 		}
@@ -57,8 +59,18 @@ background-color: #ccc;
 		}
 
 		form {
-		padding: 2rem;
-		max-width: 35rem;
+			padding: 2rem;
+			max-width: 35rem;
+
+			.datePicker {
+				font-size: .9rem;
+				background-color: #ccc;
+				width: 33.5rem;
+				border: 1px solid #aaa;
+				border-radius: .2rem;
+				margin-top: .5rem;
+				padding: 1rem .7rem;
+			}
 		}
 	}
 }
